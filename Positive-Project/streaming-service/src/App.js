@@ -100,15 +100,7 @@ function App() {
       <AccordionStyle></AccordionStyle>
 
   {/*Rosanne ==============================================================================================================================*/}
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">Welcome</Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
+      <AppbarStyle></AppbarStyle>
       
       <form noValidate>
         <TextField
