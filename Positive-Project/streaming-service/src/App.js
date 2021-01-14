@@ -1,7 +1,13 @@
 import "./App.css";
 
+
 import AvatarOne from "./AvatarOne";
 import AvatarTwo from "./AvatarTwo";
+import AccordionStyle from "./AccordionStyle";
+import AppbarStyle from "./AppbarStyle";
+import CustomCard from "./CustomCard";
+import CustomFormGroup from "./CustomFormGroup";
+
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,9 +24,6 @@ import Popover from "@material-ui/core/Popover";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -28,9 +31,6 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import TextField from "@material-ui/core/TextField";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
 
 let anchorEl;
 let open = false;
@@ -96,54 +96,14 @@ function App() {
 
 
   return (
+    
+
     <div>
-      
+      <AccordionStyle></AccordionStyle>
+
   {/*Rosanne ==============================================================================================================================*/}
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">Welcome</Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        ></AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Welcome to our streaming service! We provide you the latest movies
-            and tv shows at the comfort of your home!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>genres</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            We offer all genres of movies and tv shows at an affordable price!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>MORE COMING SOON!</Typography>
-        </AccordionSummary>
-      </Accordion>
+      <AppbarStyle></AppbarStyle>
+
       <form noValidate>
         <TextField
           id="datetime-local"
@@ -160,30 +120,8 @@ function App() {
 
 
 {/*Bijorn =================================================================================================================================================*/}
-      <div>
-        <br></br>
-        <br></br>
-      </div>
-      <Card variant="outlined">
-        <CardContent>
-          <Typography color="textSecondary" gutterBottom>
-            Random movie of the day:
-          </Typography>
-          <Typography variant="h5" component="h2">
-            Some movie
-          </Typography>
-          <Typography color="textSecondary">Some year</Typography>
-          <Typography variant="body2" component="p">
-            Some brief description
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
-      <FormGroup row>
-        <FormControlLabel disabled control={<Switch />} label="Dark Mode" />
-      </FormGroup>
+     <CustomCard></CustomCard>
+     <CustomFormGroup></CustomFormGroup>
       <div>
         {["menu"].map((anchor) => (
           <React.Fragment key={anchor}>
