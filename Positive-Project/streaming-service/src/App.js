@@ -1,4 +1,7 @@
 import "./App.css";
+
+import AccordionStyle from "./AccordionStyle";
+import AppbarStyle from "./AppbarStyle";
 import CustomCard from "./CustomCard";
 import CustomFormGroup from "./CustomFormGroup";
 import React from "react";
@@ -89,54 +92,14 @@ function App() {
 
 
   return (
+    
+
     <div>
-      
+      <AccordionStyle></AccordionStyle>
+
   {/*Rosanne ==============================================================================================================================*/}
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">Welcome</Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        ></AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Welcome to our streaming service! We provide you the latest movies
-            and tv shows at the comfort of your home!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>genres</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            We offer all genres of movies and tv shows at an affordable price!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>MORE COMING SOON!</Typography>
-        </AccordionSummary>
-      </Accordion>
+      <AppbarStyle></AppbarStyle>
+
       <form noValidate>
         <TextField
           id="datetime-local"
