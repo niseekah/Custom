@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.App-background
+{
+  background-image: url("https://www.screengeek.net/wp-content/uploads/2020/12/hbo-max-wb-movies-2021.jpg");
+}
+
+.App-column {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.App-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.App-box
+{
+  background-color: lightgrey;
+  width: 100px;
+  height: 5px;
+  border: 15px inset rgb(93, 74, 145);
+  padding: 10px;
+  margin: 20px;
+}
