@@ -1,5 +1,5 @@
 import "./App.css";
-
+import AccordionStyle from "./AccordionStyle";
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
@@ -94,8 +94,11 @@ function App() {
 
 
   return (
+    
+
     <div>
-      
+      <AccordionStyle></AccordionStyle>
+
   {/*Rosanne ==============================================================================================================================*/}
       <AppBar position="static">
         <Toolbar>
@@ -106,42 +109,7 @@ function App() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        ></AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Welcome to our streaming service! We provide you the latest movies
-            and tv shows at the comfort of your home!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>genres</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            We offer all genres of movies and tv shows at an affordable price!
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>MORE COMING SOON!</Typography>
-        </AccordionSummary>
-      </Accordion>
+      
       <form noValidate>
         <TextField
           id="datetime-local"
